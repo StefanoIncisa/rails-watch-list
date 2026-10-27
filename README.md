@@ -2,7 +2,7 @@
 
 A movie watch list app built with **Ruby on Rails** and **PostgreSQL**. The goal is to let users create themed lists (for example "Classic thrillers") and bookmark movies into them with a short comment.
 
-Built during the [Le Wagon](https://www.lewagon.com) Web Development bootcamp (London, 2026).
+Built during the [Le Wagon](https://www.lewagon.com) AI Software Development bootcamp (2026).
 
 > Status: work in progress. The project is set up (Rails 8, PostgreSQL, Bootstrap, Simple Form, RSpec) and the models and pages are the next step.
 

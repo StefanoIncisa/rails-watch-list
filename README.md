@@ -1,24 +1,45 @@
-# README
+# Rails Watch List
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A movie watch list app built with **Ruby on Rails** and **PostgreSQL**. The goal is to let users create themed lists (for example "Classic thrillers") and bookmark movies into them with a short comment.
 
-Things you may want to cover:
+Built during the [Le Wagon](https://www.lewagon.com) Web Development bootcamp (London, 2026).
 
-* Ruby version
+> Status: work in progress. The project is set up (Rails 8, PostgreSQL, Bootstrap, Simple Form, RSpec) and the models and pages are the next step.
 
-* System dependencies
+## Planned data model
 
-* Configuration
+```
+Movie  1 ──< Bookmark >── 1  List
+title, overview,      comment     name
+poster_url, rating
+```
 
-* Database creation
+- A list has many bookmarks and many movies through bookmarks
+- A movie can be in many lists, and cannot be deleted while it is bookmarked
+- The same movie can only be bookmarked once per list
 
-* Database initialization
+## Tech stack
 
-* How to run the test suite
+| Layer | Technology |
+| --- | --- |
+| Framework | Ruby on Rails 8 |
+| Database | PostgreSQL |
+| Front end | Bootstrap 5, Simple Form, Font Awesome |
+| Testing | RSpec |
 
-* Services (job queues, cache servers, search engines, etc.)
+## Run it locally
 
-* Deployment instructions
+```bash
+git clone https://github.com/StefanoIncisa/rails-watch-list.git
+cd rails-watch-list
+bundle install
+rails db:create db:migrate
+rails server
+```
 
-* ...
+## Roadmap
+
+- [ ] Movie, List and Bookmark models with validations
+- [ ] Seed movies from an external movie API
+- [ ] Pages to create lists and add bookmarks
+- [ ] Deploy
